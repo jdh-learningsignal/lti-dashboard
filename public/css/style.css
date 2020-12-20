@@ -1,0 +1,140 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+span, a, li, p, dl, dt, dd, table, th, td, strong, h1, h2, h3, h4, h5, button {transform: skew(-0.1deg);}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html body * { font-family: 'Roboto', sans-serif; }
+.thin      { font-weight: 100 }
+.light		{ font-weight: 300 }
+.medium		{ font-weight: 500 }
+.bold		{ font-weight: 700 }
+
+.pc-wrap {    
+    max-width: 1280px;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.red {color: #D80000;}
+.green {color: #1BBE01;}
+.yellow {color: #FFC01F;}
+
+/*대시보드*/
+.dashboard-wrap {}
+.dashboard-wrap .pc-wrap {}
+.dashboard-wrap .dashboard-cont-box {background: #F6F8FB; border: 1px solid #E3E6E8; box-sizing: border-box; padding:30px;}
+.dashboard-wrap .dashboard-cont-box h3.content-title {padding-bottom:5px; color:#333; font-size: 36px; font-weight: 400; line-height: 42px; border-bottom: 2px solid #C7CDD1;}
+.dashboard-wrap .dashboard-cont-box .cont-box {margin-bottom:80px;}
+
+
+/*대시보드 공지사항, QnA */
+.dashboard-wrap .dashboard-cont-box .lecture-notice-list {overflow:hidden;}
+.dashboard-wrap .dashboard-cont-box .lecture-notice-list li {display:inline-block; width:25%; float:left; padding:0 10px; box-sizing: border-box; margin-top: 20px; cursor: pointer;}
+.dashboard-wrap .dashboard-cont-box .lecture-notice-list li .lecture-level {border: 1px solid #C7CDD1; border-radius: 5px; background: #FFFFFF; padding:15px; position:relative;}
+.dashboard-wrap .dashboard-cont-box .lecture-notice-list li .lecture-level h4 {margin-bottom:10px; font-size: 24px; font-style: normal; font-weight: 700; line-height: 28px; color:#ee2f44;}
+.dashboard-wrap .dashboard-cont-box .lecture-notice-list li .lecture-level p strong {font-weight: normal; font-size: 24px; line-height: 28px; color:#333;}
+.dashboard-wrap .dashboard-cont-box .lecture-notice-list li .lecture-level .date {font-size: 18px; line-height: 21px; color:#333; margin-top:5px;}
+.dashboard-wrap .dashboard-cont-box .lecture-notice-list li .lecture-level .status-num {font-size:30px; color:#fff; text-align: center; line-height:60px; width:60px; height:60px; display:inline-block; border-radius: 5px 0px; position: absolute; right:0; bottom:0; background-color: #D80000;}
+.dashboard-wrap .dashboard-cont-box .lecture-notice-list li:nth-child(1) .lecture-level h4 {color:#ee2f44;}
+.dashboard-wrap .dashboard-cont-box .lecture-notice-list li:nth-child(2) .lecture-level h4 {color:#518bc9;}
+.dashboard-wrap .dashboard-cont-box .lecture-notice-list li:nth-child(3) .lecture-level h4 {color: #efd31a;}
+.dashboard-wrap .dashboard-cont-box .lecture-notice-list li:nth-child(4) .lecture-level h4 {color: #a1cd49;}
+.dashboard-wrap .dashboard-cont-box .lecture-notice-list li:nth-child(5) .lecture-level h4 {color: #f4ae1a;}
+.dashboard-wrap .dashboard-cont-box .lecture-notice-list li:nth-child(6) .lecture-level h4 {color: #f36b28;}
+.dashboard-wrap .dashboard-cont-box .lecture-notice-list li:nth-child(7) .lecture-level h4 {color: #ef4924;}
+.dashboard-wrap .dashboard-cont-box .lecture-notice-list li:nth-child(8) .lecture-level h4 {color: #ec468b;}
+.dashboard-wrap .dashboard-cont-box .lecture-notice-list li:nth-child(9) .lecture-level h4 {color: #b856a1;}
+.dashboard-wrap .dashboard-cont-box .lecture-notice-list li:nth-child(10) .lecture-level h4 {color: #915ba6;}
+.dashboard-wrap .dashboard-cont-box .lecture-notice-list li:nth-child(11) .lecture-level h4 {color: #27beb6;}
+.dashboard-wrap .dashboard-cont-box .lecture-notice-list li:nth-child(12) .lecture-level h4 {color: #67bf6b;}
+
+/*대시보드 학습활동관리, 강의실*/
+.dashboard-wrap .dashboard-cont-box .learning-management-list {overflow:hidden;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li {display:inline-block; width:25%; float:left; padding:0 10px; box-sizing: border-box; margin-top: 20px; cursor: pointer;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li .management-box {border: 1px solid #C7CDD1; border-radius: 5px; background: #FFFFFF; position:relative;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li .management-box h4 {margin-bottom:10px; font-size: 24px; font-style: normal; font-weight: 700; line-height: 28px; color:#ee2f44;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li .management-box p strong {font-weight: 400; font-size: 18px; line-height: 21px; color:#333;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li .management-box .management-top {padding:15px; background-size:150px;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li .management-box .badbg {background: url(../img/badbg.png)no-repeat; background-position: bottom right; background-size: 145px;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li .management-box .goodbg {background: url(../img/Goodbg.png)no-repeat; background-position: bottom right; background-size: 145px;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li .management-box .normalbg {background: url(../img/normalbg.png)no-repeat; background-position: bottom right; background-size: 145px;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li table {width: 100%; text-align:center;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li table tr {}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li table tr th {font-size:18px; color:#000; line-height:48px; border: 1px solid #C7CDD1; background-color: #EAEEF4;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li table tr th strong {}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li table tr td {font-size:16px; color: #000; line-height:48px; border: 1px solid #C7CDD1;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li table tr td strong {font-size:18px; font-weight:bold; }
+.dashboard-wrap .dashboard-cont-box .learning-management-list li table tr td span {}
+
+.dashboard-wrap .dashboard-cont-box .learning-management-list li:nth-child(1) .management-box h4 {color:#ee2f44;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li:nth-child(2) .management-box h4 {color:#518bc9;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li:nth-child(3) .management-box h4 {color: #efd31a;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li:nth-child(4) .management-box h4 {color: #a1cd49;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li:nth-child(5) .management-box h4 {color: #f4ae1a;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li:nth-child(6) .management-box h4 {color: #f36b28;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li:nth-child(7) .management-box h4 {color: #ef4924;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li:nth-child(8) .management-box h4 {color: #ec468b;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li:nth-child(9) .management-box h4 {color: #b856a1;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li:nth-child(10) .management-box h4 {color: #915ba6;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li:nth-child(11) .management-box h4 {color: #27beb6;}
+.dashboard-wrap .dashboard-cont-box .learning-management-list li:nth-child(12) .management-box h4 {color: #67bf6b;}
+
+/*대시보드 모바일 css*/
+@media all and (max-width: 768px)
+{
+		.dashboard-wrap .pc-wrap {padding:0;}
+		.dashboard-wrap .dashboard-cont-box {padding:10px;}
+        .dashboard-wrap .dashboard-cont-box .lecture-notice-list li {width:100%;} 
+        .dashboard-wrap .dashboard-cont-box .learning-management-list li {width:100%;}
+}
+
+
+
+

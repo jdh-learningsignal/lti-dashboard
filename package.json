@@ -1,0 +1,40 @@
+{
+  "name": "learningsignal-dashboard-lti",
+  "version": "0.0.1",
+  "description": "새로운 캔버스 대시보드 LTI 모듈",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "^14.15.1",
+    "npm": "6.9.0"
+  },
+  "author": "learningsignal",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "csurf": "^1.11.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "helmet": "^4.2.0",
+    "hpp": "^0.2.3",
+    "ims-lti": "^3.0.2",
+    "jquery": "^3.5.1",
+    "morgan": "^1.10.0",
+    "nunjucks": "^3.2.2",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "pm2": "^4.5.1",
+    "pug": "^2.0.4",
+    "sanitize-html": "^2.3.0",
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

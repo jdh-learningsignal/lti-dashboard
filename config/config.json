@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "canvas",
+    "password": "qwaszx12",
+    "database": "canvas_production",
+    "host": "112.169.121.122",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "canvas",
+    "password": "qwaszx12",
+    "database": "canvas_production",
+    "host": "112.169.121.122",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
