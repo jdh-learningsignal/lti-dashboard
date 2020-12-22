@@ -1,163 +1,17 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<div class="dashboard-wrap" data-account-id="{{accountId}}">
+<div class="dashboard-wrap" id="dashboard-wrap" data-account-id="{{accountId}}" data-is-student="{{isStudent}}">
     <div class="pc-wrap">
         <div class="dashboard-cont-box">
             <div class="cont-box notice-area">
                 <h3 class="content-title">공지사항</h3>
 
-                <ul class="lecture-notice-list">
-
-                    <li>
-                        <a href="https://dev.canvas.lineedu.kr/courses/471/announcements" target="_top">
-                        <div class="lecture-level">
-                            
-                            <h4>데이터과학</h4>
-                            <p><strong>데이터</strong></p>
-                            <p class="date">2020년 2학기</p>
-
-                            <span class="status-num">4</span>
-                        </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://dev.canvas.lineedu.kr/courses/471/announcements" target="_top">
-                        <div class="lecture-level">
-                            <h4>데이터과학</h4>
-                            <p><strong>데이터</strong></p>
-                            <p class="date">2020년 2학기</p>
-
-                            <span class="status-num">4</span>
-                        </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://dev.canvas.lineedu.kr/courses/471/announcements" target="_top">
-                        <div class="lecture-level">
-                            <h4>데이터과학</h4>
-                            <p><strong>데이터</strong></p>
-                            <p class="date">2020년 2학기</p>
-
-                            <span class="status-num">4</span>
-                        </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://dev.canvas.lineedu.kr/courses/471/announcements" target="_top">
-                        <div class="lecture-level">
-                            <h4>데이터과학</h4>
-                            <p><strong>데이터</strong></p>
-                            <p class="date">2020년 2학기</p>
-
-                            <span class="status-num">4</span>
-                        </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://dev.canvas.lineedu.kr/courses/471/announcements" target="_top">
-                        <div class="lecture-level">
-                            <h4>데이터과학</h4>
-                            <p><strong>데이터</strong></p>
-                            <p class="date">2020년 2학기</p>
-
-                            <span class="status-num">4</span>
-                        </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://dev.canvas.lineedu.kr/courses/471/announcements" target="_top">
-                        <div class="lecture-level">
-                            <h4>데이터과학</h4>
-                            <p><strong>데이터</strong></p>
-                            <p class="date">2020년 2학기</p>
-
-                            <span class="status-num">4</span>
-                        </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://dev.canvas.lineedu.kr/courses/471/announcements" target="_top">
-                        <div class="lecture-level">
-                            <h4>데이터과학</h4>
-                            <p><strong>데이터</strong></p>
-                            <p class="date">2020년 2학기</p>
-
-                            <span class="status-num">4</span>
-                        </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://dev.canvas.lineedu.kr/courses/471/announcements" target="_top">
-                        <div class="lecture-level">
-                            <h4>데이터과학</h4>
-                            <p><strong>데이터</strong></p>
-                            <p class="date">2020년 2학기</p>
-
-                            <span class="status-num">4</span>
-                        </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://dev.canvas.lineedu.kr/courses/471/announcements" target="_top">
-                        <div class="lecture-level">
-                            <h4>데이터과학</h4>
-                            <p><strong>데이터</strong></p>
-                            <p class="date">2020년 2학기</p>
-
-                            <span class="status-num">4</span>
-                        </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://dev.canvas.lineedu.kr/courses/471/announcements" target="_top">
-                        <div class="lecture-level">
-                            <h4>데이터과학</h4>
-                            <p><strong>데이터</strong></p>
-                            <p class="date">2020년 2학기</p>
-
-                            <span class="status-num">4</span>
-                        </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://dev.canvas.lineedu.kr/courses/471/announcements" target="_top">
-                        <div class="lecture-level">
-                            <h4>데이터과학</h4>
-                            <p><strong>데이터</strong></p>
-                            <p class="date">2020년 2학기</p>
-
-                            <span class="status-num">4</span>
-                        </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://dev.canvas.lineedu.kr/courses/471/announcements" target="_top">
-                        <div class="lecture-level">
-                            <h4>데이터과학</h4>
-                            <p><strong>데이터</strong></p>
-                            <p class="date">2020년 2학기</p>
-
-                            <span class="status-num">4</span>
-                        </div>
-                        </a>
-                    </li>
-                    
+                <ul class="lecture-notice-list" id="announcements">
                 </ul>
             </div>
 
-            <div class="cont-box learning-area">
+            <div class="cont-box learning-area" id="learning-activity-management">
                 <h3 class="content-title">학습활동관리</h3>
 
                 <ul class="learning-management-list">
@@ -193,7 +47,7 @@
                             <!-- 배경이미지 class명 추가 goodbg, badbg normalbg -->
                             <div class="management-top badbg">
                                 <h4>영상학과</h4>
-                                <p><strong>미수율 모두 확인</strong></p>
+                                <p><strong>이수율 모두 확인</strong></p>
                             </div>
                             <table>
                                 <tr>
@@ -220,7 +74,7 @@
                             <!-- 배경이미지 class명 추가 goodbg, badbg normalbg -->
                             <div class="management-top goodbg">
                                 <h4>기술과경제학</h4>
-                                <p><strong>미수율 모두 확인</strong></p>
+                                <p><strong>이수율 모두 확인</strong></p>
                             </div>
                             <table>
                                 <tr>
@@ -247,7 +101,7 @@
                             <!-- 배경이미지 class명 추가 goodbg, badbg normalbg -->
                             <div class="management-top normalbg">
                                 <h4>R&D관리</h4>
-                                <p><strong>미수율 모두 확인</strong></p>
+                                <p><strong>이수율 모두 확인</strong></p>
                             </div>
                             <table>
                                 <tr>
@@ -274,7 +128,7 @@
                             <!-- 배경이미지 class명 추가 goodbg, badbg normalbg -->
                             <div class="management-top normalbg">
                                 <h4>컴퓨터공학</h4>
-                                <p><strong>미수율 모두 확인</strong></p>
+                                <p><strong>이수율 모두 확인</strong></p>
                             </div>
                             <table>
                                 <tr>
@@ -299,161 +153,15 @@
             </div>
 
             <div class="cont-box qna-area">
-                <h3 class="content-title">Q&A</h3>
-                <ul class="lecture-notice-list">
-
-                    <li>
-                        <div class="lecture-level">
-                            <h4>데이터과학</h4>
-                            <p><strong>데이터</strong></p>
-                            <p class="date">2020년 2학기</p>
-
-                            <span class="status-num">4</span>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="lecture-level">
-                            <h4>데이터과학</h4>
-                            <p><strong>데이터</strong></p>
-                            <p class="date">2020년 2학기</p>
-
-                            <span class="status-num">4</span>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="lecture-level">
-                            <h4>데이터과학</h4>
-                            <p><strong>데이터</strong></p>
-                            <p class="date">2020년 2학기</p>
-
-                            <span class="status-num">4</span>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="lecture-level">
-                            <h4>데이터과학</h4>
-                            <p><strong>데이터</strong></p>
-                            <p class="date">2020년 2학기</p>
-
-                            <span class="status-num">4</span>
-                        </div>
-                    </li>
+                <h3 class="content-title">질의응답</h3>
+                <ul class="lecture-notice-list" id="qnas">
                 </ul>
             </div>
 
-            <div class="cont-box classroom-area">
+            <div class="cont-box classroom-area" id="classroom">
                 <h3 class="content-title">강의실</h3>
-                <ul class="learning-management-list">
-                    <li>
-                        <div class="management-box">
-                            <!-- 배경이미지 class명 추가 goodbg, badbg normalbg -->
-                            <div class="management-top badbg">
-                                <h4>데이터 과학</h4>
-                                <p><strong>미수율 모두 확인</strong></p>
-                            </div>
-                            <table>
-                                <tr>
-                                    <th><strong>이수율</strong></th>
-                                    <th>강의</th>
-                                    <th>숙제</th>
-                                </tr>
-                                <tr>
-                                    <td>지난주</td>
-                                    <td><strong class="red">45<span>%</span></strong></td>
-                                    <td><strong class="red">60<span>%</span></strong></td>
-                                </tr>
-                                <tr>
-                                    <td>To Do</td>
-                                    <td><strong class="red">45<span>%</span></strong></td>
-                                    <td><strong class="yellow">70<span>%</span></strong></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="management-box">
-                            <!-- 배경이미지 class명 추가 goodbg, badbg normalbg -->
-                            <div class="management-top badbg">
-                                <h4>영상학과</h4>
-                                <p><strong>미수율 모두 확인</strong></p>
-                            </div>
-                            <table>
-                                <tr>
-                                    <th><strong>이수율</strong></th>
-                                    <th>강의</th>
-                                    <th>숙제</th>
-                                </tr>
-                                <tr>
-                                    <td>지난주</td>
-                                    <td><strong class="red">60<span>%</span></strong></td>
-                                    <td><strong class="red">60<span>%</span></strong></td>
-                                </tr>
-                                <tr>
-                                    <td>To Do</td>
-                                    <td><strong class="red">55<span>%</span></strong></td>
-                                    <td><strong class="yellow">75<span>%</span></strong></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="management-box">
-                            <!-- 배경이미지 class명 추가 goodbg, badbg normalbg -->
-                            <div class="management-top goodbg">
-                                <h4>기술과경제학</h4>
-                                <p><strong>미수율 모두 확인</strong></p>
-                            </div>
-                            <table>
-                                <tr>
-                                    <th><strong>이수율</strong></th>
-                                    <th>강의</th>
-                                    <th>숙제</th>
-                                </tr>
-                                <tr>
-                                    <td>지난주</td>
-                                    <td><strong class="green">85<span>%</span></strong></td>
-                                    <td><strong class="green">80<span>%</span></strong></td>
-                                </tr>
-                                <tr>
-                                    <td>To Do</td>
-                                    <td><strong class="green">95<span>%</span></strong></td>
-                                    <td><strong class="yellow">70<span>%</span></strong></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="management-box">
-                            <!-- 배경이미지 class명 추가 goodbg, badbg normalbg -->
-                            <div class="management-top normalbg">
-                                <h4>R&D관리</h4>
-                                <p><strong>미수율 모두 확인</strong></p>
-                            </div>
-                            <table>
-                                <tr>
-                                    <th><strong>이수율</strong></th>
-                                    <th>강의</th>
-                                    <th>숙제</th>
-                                </tr>
-                                <tr>
-                                    <td>지난주</td>
-                                    <td><strong class="yellow">75<span>%</span></strong></td>
-                                    <td><strong class="red">60<span>%</span></strong></td>
-                                </tr>
-                                <tr>
-                                    <td>To Do</td>
-                                    <td><strong class="green">65<span>%</span></strong></td>
-                                    <td><strong class="yellow">70<span>%</span></strong></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </li>
+                <ul class="learning-management-list" id="classrooms">
+                    
                 </ul>
             </div>
         </div>

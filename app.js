@@ -48,7 +48,10 @@ app.enable('trust proxy');
 
 app.get('/application', (req, res, next) => {
   if (req.session.userId) {
-    return res.render('dashboard', {accountId: req.session.body.custom_canvas_account_id})
+    return res.render('dashboard', {
+      accountId: req.session.body.custom_canvas_account_id,
+      isStudent: req.session.body.student
+    })
   } else {
     next(new Error('Session invalid. Please login via LTI to use this application.'));
   }
@@ -56,7 +59,7 @@ app.get('/application', (req, res, next) => {
 
 app.post('/launch_lti', lti.handleLaunch);
 
-// app.use('/', indexRouter);
+app.use('/', indexRouter);
 app.use('/accounts', accountsRouter);
 
 app.use((err, req, res, next) => {

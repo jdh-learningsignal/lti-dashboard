@@ -55,17 +55,22 @@ html body * { font-family: 'Roboto', sans-serif; }
 .bold		{ font-weight: 700 }
 
 .pc-wrap {    
-    max-width: 1280px;
+    max-width: 1100px;
     box-sizing: border-box;
     padding: 0 15px;
-    margin: 0 auto;
     width: 100%;
 }
 
-.red {color: #D80000;}
-.green {color: #1BBE01;}
+.red {color: #FF3A3A;}
+.green {color: #0ADA83;}
 .yellow {color: #FFC01F;}
 
+.red-bg {background-color: #FF3A3A;}
+.green-bg {background-color: #0ADA83;}
+.yellow-bg {background-color: #FFC01F;}
+.grade-wrap .accordion-list ul li .uk-accordion-content .chart-area ul.tab-list li.uk-active .gradient-red {border:none; background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FF3A3A 100%);}
+.grade-wrap .accordion-list ul li .uk-accordion-content .chart-area ul.tab-list li.uk-active .gradient-green {border:none; background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #0ADA83 100%);}
+.grade-wrap .accordion-list ul li .uk-accordion-content .chart-area ul.tab-list li.uk-active .gradient-yellow {border:none; background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFC01F 100%);}
 /*대시보드*/
 .dashboard-wrap {}
 .dashboard-wrap .pc-wrap {}
@@ -134,6 +139,77 @@ html body * { font-family: 'Roboto', sans-serif; }
         .dashboard-wrap .dashboard-cont-box .lecture-notice-list li {width:100%;} 
         .dashboard-wrap .dashboard-cont-box .learning-management-list li {width:100%;}
 }
+
+
+/* 성적관리 */
+.grade-wrap {background-color: #F6F8FB; min-height: 100vh; padding: 40px 0;}
+.grade-wrap .accordion-list .uk-accordion-title::before {display: none;}
+.grade-wrap .accordion-list .uk-accordion-title span span {transition: all 0.3s;}
+.grade-wrap .accordion-list .uk-open .uk-accordion-title span span {transform: rotate(90deg);}
+
+
+.grade-wrap .accordion-list {width:1280px; border:1px solid #C7CDD1; background-color: #fff; padding: 10px; box-sizing: border-box;}
+.grade-wrap .accordion-list>h2 {margin-bottom:5px; font-style: normal; font-weight: bold; font-size: 18px;}
+.grade-wrap .accordion-list .accordion-header {}
+.grade-wrap .accordion-list .accordion-header dl {width:100%; text-align:center; overflow: hidden;}
+.grade-wrap .accordion-list .accordion-header dl dt {box-sizing: border-box; font-weight: bold; font-size: 14px; line-height: 17px; color: #333; background-color: #E1E0E0; line-height: 40px; border:1px solid #9EA3A6; border-right: none; display:inline-block; float:left;}
+.grade-wrap .accordion-list .accordion-header dl dt:last-child {border-right: 1px solid #9EA3A6;}
+.grade-wrap .accordion-list .accordion-header dl dt:nth-child(1) {width:5%;}
+.grade-wrap .accordion-list .accordion-header dl dt:nth-child(2) {width:13%;}
+.grade-wrap .accordion-list .accordion-header dl dt:nth-child(3) {width:12%;}
+.grade-wrap .accordion-list .accordion-header dl dt:nth-child(4) {width:10%;}
+.grade-wrap .accordion-list .accordion-header dl dt:nth-child(5) {width:15%;}
+.grade-wrap .accordion-list .accordion-header dl dt:nth-child(6) {width:25%;}
+.grade-wrap .accordion-list .accordion-header dl dt:nth-child(7) {width:10%;}
+.grade-wrap .accordion-list .accordion-header dl dt:nth-child(8) {width:10%;}
+
+.grade-wrap .accordion-list>ul>li {margin:0;}
+.grade-wrap .accordion-list>ul>li:nth-child(even) {background-color:  #EBEAEA;}
+.grade-wrap .accordion-list ul li .uk-accordion-title {overflow:hidden;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div {box-sizing: border-box; border:1px solid #C7CDD1; border-right: none; border-top:none; display:inline-block; float:left; text-align:center;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div:last-child {border-right: 1px solid #C7CDD1;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div span {font-size:14px; color: #333;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(1) {width:5%;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(2) {width:13%;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(3) {width:12%;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(4) {width:10%;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(5) {width:15%;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(6) {width:25%;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(7) {width:10%;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(8) {width:10%;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(7) span {font-size: 18px;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(8) span {font-size: 18px;}
+.grade-wrap .accordion-list ul li .uk-accordion-content {background-color:#fff; margin-top: 0; border: 1px solid #C7CDD1; border-top:none; overflow:hidden; padding:10px;}
+.grade-wrap .accordion-list ul li .uk-accordion-content>div {display:inline-block; float:left;}
+.grade-wrap .accordion-list ul li .uk-accordion-content .col-5 {width:40%;}
+.grade-wrap .accordion-list ul li .uk-accordion-content .col-7 {width:60%;}
+
+.grade-wrap .accordion-list ul li .uk-accordion-content div .infobox {overflow:hidden; margin-bottom:20px;}
+.grade-wrap .accordion-list ul li .uk-accordion-content div dl {display:inline-block; width:33%; float:left;}
+.grade-wrap .accordion-list ul li .uk-accordion-content div .user {}
+.grade-wrap .accordion-list ul li .uk-accordion-content div .user dt {font-size:24px; color:#333;}
+.grade-wrap .accordion-list ul li .uk-accordion-content div .user dd {font-size: 14px; color:#333;margin-top:20px;}
+.grade-wrap .accordion-list ul li .uk-accordion-content div .score {}
+.grade-wrap .accordion-list ul li .uk-accordion-content div .score dt {display:inline-block; font-size:14px; font-weight: 700; color:#333; margin-right:10px;}
+.grade-wrap .accordion-list ul li .uk-accordion-content div .score dd {display:inline-block; font-size:48px; font-weight: 700; vertical-align: middle;}
+.grade-wrap .accordion-list ul li .uk-accordion-content div .text-box {background: #F6F8FB; padding:18px; font-size:14px; font-weight: 400; line-height:1.3;}
+
+
+.grade-wrap .accordion-list ul li .uk-accordion-content .chart-area .chart-box {border: 1px solid #C7CDD1;}
+.grade-wrap .accordion-list ul li .uk-accordion-content .chart-area {padding:0 15px; box-sizing: border-box; position:relative; height:240px;}
+.grade-wrap .accordion-list ul li .uk-accordion-content .chart-area ul.tab-list {position:absolute; bottom:0; width:100%; overflow:hidden; padding:0 15px; box-sizing: border-box;}
+.grade-wrap .accordion-list ul li .uk-accordion-content .chart-area ul.tab-list li {width:16.66%; float:left; padding: 0; text-align:center;}
+.grade-wrap .accordion-list ul li .uk-accordion-content .chart-area ul.tab-list li span {display:inline-block; width:100%; line-height:40px; font-size: 18px; color:#333;}
+.grade-wrap .accordion-list ul li .uk-accordion-content .chart-area ul.tab-list li a {height: 40px; display: inline-block; width:100%; padding:0; line-height:40px; font-size:14px; color:#333; font-weight:700; box-sizing: border-box;}
+.grade-wrap .accordion-list ul li .uk-accordion-content .chart-area ul.tab-list li.uk-disabled a {color:#ccc;}
+.grade-wrap .accordion-list ul li .uk-accordion-content .chart-area ul.tab-list li.uk-disabled span {color:#ccc;}
+.grade-wrap .accordion-list ul li .uk-accordion-content .chart-area ul.tab-list li.uk-active a {box-sizing: border-box;}
+
+.grade-wrap .accordion-list ul li.drag-list {background-color: #FF0000; padding:3px; border: 2px solid #000000;}
+.grade-wrap .accordion-list ul li.drag-list p {overflow:hidden; line-height: 27px; color:#fff; cursor: grab;}
+.grade-wrap .accordion-list ul li.drag-list p input {float:right; margin:0 10px; font-size:14px; width: 48px; border-radius:5px; outline: none; border:none; vertical-align: middle; text-align: center; height:25px;}
+.grade-wrap .accordion-list ul li.drag-list p button {float:right; height:25px; color:#fff; border:1px solid #fff; border-radius: 5px; background-color:transparent;}
+
 
 
 
