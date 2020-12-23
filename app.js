@@ -61,10 +61,14 @@ app.set('json spaces', 2);
 // app.enable('trust proxy');
 
 app.get('/dashboard', (req, res, next) => {
-  if (req.session.userId) {
+  console.log(req.query);
+  //if (req.session.userId) {
+  if (req.query) {
     return res.render('dashboard', {
-      accountId: req.session.body.custom_canvas_account_id,
-      isStudent: req.session.body.student
+      //accountId: req.session.body.custom_canvas_account_id,
+      //isStudent: req.session.body.student
+      accountId: req.query.custom_canvas_account_id,
+      isStudent: req.query.student
     })
   } else {
     next(new Error('Session invalid. Please login via LTI to use this application.'));
@@ -72,9 +76,14 @@ app.get('/dashboard', (req, res, next) => {
 });
 
 app.get('/grading', (req, res, next) => {
-  if (req.session.userId) {
+  console.log(req.query);
+  //if (req.session.userId) {
+  if (req.query) {
     return res.render('grading', {
-      accountId: req.session.body.custom_canvas_account_id
+      //accountId: req.session.body.custom_canvas_account_id,
+      //isStudent: req.session.body.student
+      accountId: req.query.custom_canvas_account_id,
+      isStudent: req.query.student
     })
   } else {
     next(new Error('Session invalid. Please login via LTI to use this application.'));

@@ -59,9 +59,9 @@ exports.handleLaunch = (req, res, next) => {
           req.session.save(() => {});
           
           if (req.url.includes('dashboard')) {
-            return res.redirect('/dashboard');
+            return res.redirect('/dashboard?custom_canvas_account_id=' + provider.body.custom_canvas_account_id + '&student=' + provider.body.student);
           } else {
-            return res.redirect('/grading');
+            return res.redirect('/grading?custom_canvas_account_id=' + provider.body.custom_canvas_account_id + '&student=' + provider.body.student);
           }
         });
       } else {
