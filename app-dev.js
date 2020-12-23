@@ -1,11 +1,13 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const session = require('express-session');
-const redis = require('redis')
+//const redis = require('redis');
 const path = require('path');
 const morgan = require('morgan');
 const nunjucks = require('nunjucks');
 const lti = require('./lti');
+const https = require('https');
+const fs = require('fs');
 
 //let RedisStore = require('connect-redis')(session)
 //let redisClient = redis.createClient(6379, 'localhost');
@@ -19,9 +21,15 @@ const { sequelize } = require('./models');
 const indexRouter = require('./routes');
 const accountsRouter = require('./routes/accounts');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 443;
 // this express server should be secured/hardened for production use
 const app = express();
+
+const options = {
+  key: fs.readFileSync('/home/ubuntu/cert/bluebanana.co.kr_20201222N610.key.pem'),
+  cert: fs.readFileSync('/home/ubuntu/cert/bluebanana.co.kr_20201222N610.crt.pem'),
+  ca: fs.readFileSync('/home/ubuntu/cert/ca-chain-bundle.pem')
+};
 
 app.set('view engine', 'html');
 nunjucks.configure('views', {
@@ -93,4 +101,4 @@ app.use((err, req, res, next) => {
   res.render('error');
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+https.createServer(options, app).listen(port);
