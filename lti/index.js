@@ -56,11 +56,13 @@ exports.handleLaunch = (req, res, next) => {
           req.session.isTutor = provider.instructor === true;
           req.session.contextId = provider.context_id;
           req.session.body = provider.body;
+          req.session.save(() => {});
           
-          console.log(provider);
-          
-
-          return res.redirect(301, '/application');
+          if (req.url.includes('dashboard')) {
+            return res.redirect('/dashboard');
+          } else {
+            return res.redirect('/grading');
+          }
         });
       } else {
         return next(err);

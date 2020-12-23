@@ -1,6 +1,18 @@
-{% extends 'layout.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/uikit.css">
+	<link rel="stylesheet" href="css/uikit-rtl.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,100;1,300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<title>대시보드</title>
+</head>
 
-{% block content %}
+<body>
 <div class="dashboard-wrap" id="dashboard-wrap" data-account-id="{{accountId}}" data-is-student="{{isStudent}}">
     <div class="pc-wrap">
         <div class="dashboard-cont-box">
@@ -167,4 +179,90 @@
         </div>
     </div>
 </div>
-{% endblock %}
+</body>
+<script src="js/uikit.js"></script>
+<script src="js/uikit-icons.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script>
+	// 과목 로딩
+	async function getCourses(accountId) {
+		try {
+			const res = await axios.get('/accounts/' + accountId + '/courses');
+			const courses = res.data;
+			
+			$.each(courses, function(index, item) {
+				console.log(item);
+				if (index < 12) {
+					$('#announcements').append(
+						'<li>' +
+							'<a href="https://dev.canvas.lineedu.kr/courses/' + item.id + '/announcements" target="_top">' +
+							'<div class="lecture-level">' +
+								'<h4>' + item.name + '</h4>' +
+								'<p><strong>' + item.course_code + '</strong></p>' +
+								'<p class="date">2020년 2학기</p>' +
+								'<span class="status-num">4</span>' +
+							'</div>' +
+							'</a>' +
+						'</li>');
+
+					$('#qnas').append(
+						'<li>' +
+							'<a href="https://dev.canvas.lineedu.kr/courses/' + item.id + '" target="_top">' +
+							'<div class="lecture-level">' +
+								'<h4>' + item.name + '</h4>' +
+								'<p><strong>' + item.course_code + '</strong></p>' +
+								'<p class="date">2020년 2학기</p>' +
+								'<span class="status-num">4</span>' +
+							'</div>' +
+							'</a>' +
+						'</li>');
+
+					$('#classrooms').append(
+						'<li>' +
+							'<a href="https://dev.canvas.lineedu.kr/courses/' + item.id + '" target="_top">' +
+							'<div class="management-box">' +
+								'<div class="management-top badbg">' +
+									'<h4>' + item.name + '</h4>' +
+									'<p><strong>이수율 모두 확인</strong></p>' +
+								'</div>' +
+								'<table>' +
+									'<tr>' +
+										'<th><strong>이수율</strong></th>' +
+										'<th>강의</th>' +
+										'<th>숙제</th>' +
+									'</tr>' +
+									'<tr>' +
+										'<td>지난주</td>' +
+										'<td><strong class="red">45<span>%</span></strong></td>' +
+										'<td><strong class="red">60<span>%</span></strong></td>' +
+									'</tr>' +
+									'<tr>' +
+										'<td>To Do</td>' +
+										'<td><strong class="red">45<span>%</span></strong></td>' +
+										'<td><strong class="yellow">70<span>%</span></strong></td>' +
+									'</tr>' +
+									'</table>' +
+								'</div>' +
+						'</li>');
+				}
+			});
+
+		} catch (err) {
+			console.error(err);
+		}
+	}
+
+	const accountId = $("#dashboard-wrap").data("accountId");
+	const isStudent = $("#dashboard-wrap").data("isStudent");
+
+	if (isStudent == false) {
+		$("#learning-activity-management").hide();
+	} else {
+		$('#classroom').hide();
+	}
+	
+	getCourses(accountId);
+	
+</script>
+</html>
