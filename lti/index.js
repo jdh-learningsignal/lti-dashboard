@@ -58,10 +58,12 @@ exports.handleLaunch = (req, res, next) => {
           req.session.body = provider.body;
           req.session.save(() => {});
           
+          const qs = Object.entries(provider.body).map(e => e.join('=')).join('&')
+
           if (req.url.includes('dashboard')) {
-            return res.redirect('/dashboard?custom_canvas_account_id=' + provider.body.custom_canvas_account_id + '&student=' + provider.body.student);
+            return res.redirect('/dashboard?' + qs);
           } else {
-            return res.redirect('/grading?custom_canvas_account_id=' + provider.body.custom_canvas_account_id + '&student=' + provider.body.student);
+            return res.redirect('/grading?' + qs);
           }
         });
       } else {

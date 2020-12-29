@@ -1,0 +1,1 @@
+$('#not_right_side').width('2000');

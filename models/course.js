@@ -219,5 +219,6 @@ module.exports = class Course extends Sequelize.Model {
     
     static associate(db) {
         db.Course.belongsTo(db.Account, { foreignKey: 'account_id', targetKey: 'id' })
+        db.Course.hasMany(db.Enrollment, { foreignKey: 'course_id', sourceKey: 'id' })
     }
 }

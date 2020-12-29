@@ -17,9 +17,10 @@ const lti = require('./lti');
 
 const { sequelize } = require('./models');
 const indexRouter = require('./routes');
-const accountsRouter = require('./routes/accounts');
+const coursesRouter = require('./routes/courses');
 
 const port = process.env.PORT || 3000;
+
 // this express server should be secured/hardened for production use
 const app = express();
 
@@ -61,13 +62,12 @@ app.set('json spaces', 2);
 // app.enable('trust proxy');
 
 app.get('/dashboard', (req, res, next) => {
-  console.log(req.query);
   //if (req.session.userId) {
   if (req.query) {
     return res.render('dashboard', {
       //accountId: req.session.body.custom_canvas_account_id,
       //isStudent: req.session.body.student
-      accountId: req.query.custom_canvas_account_id,
+      userId: req.query.custom_canvas_user_id,
       isStudent: req.query.student
     })
   } else {
@@ -93,7 +93,7 @@ app.get('/grading', (req, res, next) => {
 app.post(['/launch*'], lti.handleLaunch);
 
 app.use('/', indexRouter);
-app.use('/accounts', accountsRouter);
+app.use('/api', coursesRouter);
 
 app.use((err, req, res, next) => {
   res.locals.message = err.message;

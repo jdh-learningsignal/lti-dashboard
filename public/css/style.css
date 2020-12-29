@@ -55,11 +55,12 @@ html body * { font-family: 'Roboto', sans-serif; }
 .bold		{ font-weight: 700 }
 
 .pc-wrap {    
-    max-width: 1280px;
+	/* max-width: 1280px; */
+	max-width: 2000px;
     box-sizing: border-box;
     padding: 0 15px;
     width: 100%;
-    /* margin:0 auto; */
+    /*margin:0 auto;*/
 }
 
 .red {color: #FF3A3A!important;}
@@ -149,42 +150,49 @@ html body * { font-family: 'Roboto', sans-serif; }
 .grade-wrap .accordion-list .uk-accordion-title::before {display: none;}
 .grade-wrap .accordion-list .uk-accordion-title span span {transition: all 0.3s;}
 .grade-wrap .accordion-list .uk-open .uk-accordion-title span span {transform: rotate(90deg);}
+    
 
-
-.grade-wrap .accordion-list {width:1280px; border:1px solid #C7CDD1; background-color: #fff; padding: 10px; box-sizing: border-box;}
+.grade-wrap .accordion-list {border:1px solid #C7CDD1; background-color: #fff; padding: 10px; box-sizing: border-box;}
 .grade-wrap .accordion-list>h2 {margin-bottom:5px; font-style: normal; font-weight: bold; font-size: 18px;}
 .grade-wrap .accordion-list .accordion-header {}
 .grade-wrap .accordion-list .accordion-header dl {width:100%; text-align:center; overflow: hidden;}
 .grade-wrap .accordion-list .accordion-header dl dt {box-sizing: border-box; font-weight: bold; font-size: 14px; line-height: 17px; color: #333; background-color: #E1E0E0; line-height: 40px; border:1px solid #9EA3A6; border-right: none; display:inline-block; float:left;}
 .grade-wrap .accordion-list .accordion-header dl dt:last-child {border-right: 1px solid #9EA3A6;}
-.grade-wrap .accordion-list .accordion-header dl dt:nth-child(1) {width:5%;}
-.grade-wrap .accordion-list .accordion-header dl dt:nth-child(2) {width:13%;}
-.grade-wrap .accordion-list .accordion-header dl dt:nth-child(3) {width:12%;}
-.grade-wrap .accordion-list .accordion-header dl dt:nth-child(4) {width:10%;}
-.grade-wrap .accordion-list .accordion-header dl dt:nth-child(5) {width:30%;}
+.grade-wrap .accordion-list .accordion-header dl dt:nth-child(1) {width:3%;}
+.grade-wrap .accordion-list .accordion-header dl dt:nth-child(2) {width:7%;}
+.grade-wrap .accordion-list .accordion-header dl dt:nth-child(3) {width:10%;}
+.grade-wrap .accordion-list .accordion-header dl dt:nth-child(4) {width:7%;}
+.grade-wrap .accordion-list .accordion-header dl dt:nth-child(5) {width:50%;}
 .grade-wrap .accordion-list .accordion-header dl dt:nth-child(6) {width:10%;}
-.grade-wrap .accordion-list .accordion-header dl dt:nth-child(7) {width:10%;}
-.grade-wrap .accordion-list .accordion-header dl dt:nth-child(8) {width:10%;}
+.grade-wrap .accordion-list .accordion-header dl dt:nth-child(7) {width:8%;}
+.grade-wrap .accordion-list .accordion-header dl dt:nth-child(8) {width:5%;}
 
 .grade-wrap .accordion-list>ul>li {margin:0; background-color: #fff;}
 .grade-wrap .accordion-list>ul>li:nth-child(even) {background-color:  #EBEAEA;}
 .grade-wrap .accordion-list ul li .uk-accordion-title {overflow:hidden; position:relative; z-index: 1111;}
-.grade-wrap .accordion-list ul li .uk-accordion-title div {box-sizing: border-box; border:1px solid #C7CDD1; border-right: none; border-top:none; display:inline-block; float:left; text-align:center;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div {overflow:hidden; box-sizing: border-box; border:1px solid #C7CDD1; border-right: none; border-top:none; display:inline-block; float:left; text-align:center;}
 .grade-wrap .accordion-list ul li .uk-accordion-title div:last-child {border-right: 1px solid #C7CDD1;}
-.grade-wrap .accordion-list ul li .uk-accordion-title div span {font-size:14px; color: #333;}
-.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(1) {width:5%;}
-.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(2) {width:13%;}
-.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(3) {width:12%;}
-.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(4) {width:10%;}
-.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(5) {width:30%;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div span {
+	font-size:14px; 
+	color: #333; 
+	display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(1) {width:3%;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(2) {width:7%;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(3) {width:10%;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(4) {width:7%;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(5) {width:50%;}
 .grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(6) {width:10%;}
-.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(7) {width:10%;}
-.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(8) {width:10%;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(7) {width:8%;}
+.grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(8) {width:5%;}
 .grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(7) span {font-size: 18px;}
 .grade-wrap .accordion-list ul li .uk-accordion-title div:nth-child(8) span {font-size: 18px;}
 .grade-wrap .accordion-list ul li .uk-accordion-content {background-color:#fff; margin-top: 0; border: 1px solid #C7CDD1; border-top:none; overflow:hidden; padding:10px;}
 .grade-wrap .accordion-list ul li .uk-accordion-content>div {display:inline-block; float:left;}
-.grade-wrap .accordion-list ul li .uk-accordion-content .col-3 {width:25%;}
+.grade-wrap .accordion-list ul li .uk-accordion-content .col-3 {width:25%; padding:20px; box-sizing: border-box;}
 .grade-wrap .accordion-list ul li .uk-accordion-content .col-7 {width:50%;}
 
 .grade-wrap .accordion-list ul li .uk-accordion-content div .infobox {overflow:hidden; margin-bottom:20px;}
@@ -194,15 +202,15 @@ html body * { font-family: 'Roboto', sans-serif; }
 .grade-wrap .accordion-list ul li .uk-accordion-content div .user dd {font-size: 14px; color:#333;margin-top:20px;}
 .grade-wrap .accordion-list ul li .uk-accordion-content div .score {}
 .grade-wrap .accordion-list ul li .uk-accordion-content div .score dt {display:inline-block; font-size:14px; font-weight: 700; color:#333;}
-.grade-wrap .accordion-list ul li .uk-accordion-content div .score dd {display:inline-block; font-size:48px; font-weight: 700; vertical-align: middle;}
+.grade-wrap .accordion-list ul li .uk-accordion-content div .score dd {display:inline-block; font-size:35px; font-weight: 700; vertical-align: middle;}
 .grade-wrap .accordion-list ul li .uk-accordion-content div .text-box {background: #F6F8FB; padding:18px; font-size:14px; font-weight: 400; line-height:1.3;}
 
 
-.grade-wrap .accordion-list ul li .uk-accordion-content .chart-area .chart-box {border: 1px solid #C7CDD1; min-height:250px;}
-.grade-wrap .accordion-list ul li .uk-accordion-content .chart-area {padding:0 15px; box-sizing: border-box; position:relative; height:240px;}
+.grade-wrap .accordion-list ul li .uk-accordion-content .chart-area .chart-box {border: 1px solid #C7CDD1; min-height:300px;}
+.grade-wrap .accordion-list ul li .uk-accordion-content .chart-area {padding:0 15px; box-sizing: border-box; position:relative; height:240px; margin-bottom:180px;}
 
-.grade-wrap .accordion-list ul li .uk-accordion-content ul.tab-list {width:48.5%; margin:0 25%; position:absolute; bottom:0; overflow:hidden; padding:0 15px; box-sizing: border-box;}
-.grade-wrap .accordion-list ul li .uk-accordion-content ul.tab-list li {width:16.66%; float:left; padding: 0; text-align:center;}
+.grade-wrap .accordion-list ul li .uk-accordion-content ul.tab-list {width:48%; margin:0 25%; position:absolute; bottom:30px; overflow:hidden; box-sizing: border-box;}
+.grade-wrap .accordion-list ul li .uk-accordion-content ul.tab-list li {width:20%; float:left; padding: 0; text-align:center;}
 .grade-wrap .accordion-list ul li .uk-accordion-content ul.tab-list li span {display:inline-block; width:100%; line-height:40px; font-size: 18px; color:#333;}
 .grade-wrap .accordion-list ul li .uk-accordion-content ul.tab-list li a {height: 40px; display: inline-block; width:100%; padding:0; line-height:40px; font-size:14px; color:#333; font-weight:700; box-sizing: border-box;}
 .grade-wrap .accordion-list ul li .uk-accordion-content ul.tab-list li.uk-disabled a {color:#ccc;}
@@ -210,10 +218,13 @@ html body * { font-family: 'Roboto', sans-serif; }
 .grade-wrap .accordion-list ul li .uk-accordion-content ul.tab-list li.uk-active a {box-sizing: border-box;}
 
 .grade-wrap .accordion-list ul li.drag-list {cursor: grab; height:10px;}
-.grade-wrap .accordion-list ul li.drag-list span {position: absolute; left: -50px; top:-8px;}
+.grade-wrap .accordion-list ul li.drag-list span {position: absolute; left: 0px; top:-25px;}
 .grade-wrap .accordion-list ul li.uk-open {overflow:hidden;}
 .grade-wrap .accordion-list ul li.uk-open .uk-accordion-content ul.tab-list {display:inline-block;}
 .grade-wrap .accordion-list ul li .uk-accordion-content ul.tab-list {display:none;}
+
+.drag-list:hover .arrow_box {display:inline-block; transition:all 0.3s; opacity:1;}
+.arrow_box { opacity:0;}
 
 .arrow_box {
 	position: relative;
@@ -225,8 +236,8 @@ html body * { font-family: 'Roboto', sans-serif; }
 	font-weight: bold;
 }
 .arrow_box:after, .arrow_box:before {
-	left: 100%;
-	top: 50%;
+	top: 100%;
+	left: 50%;
 	border: solid transparent;
 	content: "";
 	height: 0;
@@ -237,15 +248,15 @@ html body * { font-family: 'Roboto', sans-serif; }
 
 .arrow_box:after {
 	border-color: rgba(255, 255, 255, 0);
-	border-left-color: #fff;
+	border-top-color: #fff;
 	border-width: 8px;
-	margin-top: -8px;
+	margin-left: -8px;
 }
 .arrow_box:before {
-	border-color: rgba(255, 255, 255, 0);
-	border-left-color: #fff;
+	border-color: rgba(255, 225, 255, 0);
+	border-top-color: #fff;
 	border-width: 8px;
-	margin-top: -8px;
+	margin-left: -8px;
 }
 
 .grade-wrap .accordion-list ul li .uk-accordion-content .col-3 table {width:100%; text-align: center; }
@@ -256,7 +267,7 @@ html body * { font-family: 'Roboto', sans-serif; }
 .grade-wrap .accordion-list ul li .uk-accordion-content .col-3 .lecture-status-table2 th {vertical-align: middle; height:25px; border-top:none;}
 .grade-wrap .accordion-list ul li .uk-accordion-content .col-3 .lecture-status-table2 th.small-tablecell {width:8.3%; line-height:inherit;}
 .grade-wrap .accordion-list ul li .uk-accordion-content .col-3 .lecture-status-table2 th.small-tablecell {padding:5px 0;}
-
+.grade-wrap .accordion-list ul li .uk-accordion-content .col-3 .lecture-status-table2 tr .small-tablecell:nth-child(4) {width: 8.6%;}
 
 
 

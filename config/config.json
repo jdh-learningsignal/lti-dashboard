@@ -14,10 +14,10 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "canvas",
+    "password": "cagyh34922087!",
+    "database": "canvas_stg",
+    "host": "115.92.96.111",
     "dialect": "postgres"
   }
 }
